@@ -7,6 +7,9 @@ const port = process.env.PORT;
 const db = require('./database/db');
 const expressLayouts = require('express-ejs-layouts')
 
+app.use('/public', express.static('public'));
+
+
 // pertemuan 7
 const session = require('express-session');
 
@@ -52,5 +55,13 @@ app.get('/todo-view', isAuthenticated, (req, res) => {
             layout: 'layouts/main-layout.ejs',
             todos: todos
         });
+    });
+});
+app.post('/logout', (req, res) => {
+    req.session.destroy((err) => {
+        if (err) {
+            return res.status(500).send('Failed to log out');
+        }
+        res.redirect('/login'); // Arahkan pengguna ke halaman login setelah logout
     });
 });

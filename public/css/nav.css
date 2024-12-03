@@ -1,0 +1,30 @@
+.navbar {
+    font-size: 16px;
+    background-color: #333333;
+}
+
+.custom-navbar {
+    background-color: #333333;
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+}
+
+.nav-link:hover {
+    color: #f1f1f1;
+}
+
+.btn-outline-secondary {
+    padding: 0.4rem 1rem;
+    font-size: 14px;
+    background-color: #333333;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #555555;
+    border-color: #f1f1f1;
+}
